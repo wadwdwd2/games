@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Game Buttons</title>
+<style>
+body { font-family: Arial, sans-serif; background: #f0f2f5; margin: 0; padding: 20px; }
+h1 { text-align: center; color: #333; }
+.container { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; padding: 10px; }
+button { background-color: #4CAF50; border: none; color: white; padding: 10px 20px;
+text-align: center; font-size: 14px; border-radius: 8px; cursor: pointer;
+transition: background-color 0.3s ease; }
+button:hover { background-color: #45a049; }
+.pagination { text-align: center; margin-top: 20px; }
+.pagination button { margin: 0 5px; }
+.page { display: none; }
+.active { display: block; }
+</style>
+</head>
+<body>
+<h1>Game List</h1>
+<div class='container page' id='page0'>
+<button onclick="location.href='/10-minutes-till-dawn'">10-minutes-till-dawn</button>
+<button onclick="location.href='/100ng'">100ng</button>
+<button onclick="location.href='/1v1lol'">1v1lol</button>
+<button onclick="location.href='/1v1space'">1v1space</button>
+<button onclick="location.href='/2020-game'">2020-game</button>
+<button onclick="location.href='/2048-multitask'">2048-multitask</button>
+<button onclick="location.href='/2048'">2048</button>
+<button onclick="location.href='/8ball-billards-classic'">8ball-billards-classic</button>
+<button onclick="location.href='/9007199254740992'">9007199254740992</button>
+<button onclick="location.href='/DogeMiner'">DogeMiner</button>
+<button onclick="location.href='/FullScreenMario/Source'">FullScreenMario/Source</button>
+<button onclick="location.href='/HexGL'">HexGL</button>
+<button onclick="location.href='/OfflineParadise'">OfflineParadise</button>
+<button onclick="location.href='/Squid Gun Fest'">Squid Gun Fest</button>
+<button onclick="location.href='/Stickman-Survival'">Stickman-Survival</button>
+<button onclick="location.href='/achievementunlocked'">achievementunlocked</button>
+<button onclick="location.href='/adarkroom'">adarkroom</button>
+<button onclick="location.href='/adrenalinechallenge'">adrenalinechallenge</button>
+<button onclick="location.href='/age-of-war'">age-of-war</button>
+<button onclick="location.href='/alien-invaders-io'">alien-invaders-io</button>
+<button onclick="location.href='/alienhominid'">alienhominid</button>
+<button onclick="location.href='/align-4'">align-4</button>
+<button onclick="location.href='/among-us'">among-us</button>
+</div>
+<div class='pagination'>
+<button onclick='showPage(0)'>1</button>
+</div>
+
+<script>
+function showPage(pageNum) {
+    const pages = document.querySelectorAll('.page');
+    pages.forEach((page, index) => {
+        page.classList.remove('active');
+        if (index === pageNum) {
+            page.classList.add('active');
+        }
+    });
+}
+// Show first page by default
+showPage(0);
+</script>
+
+</body></html>
